@@ -1,0 +1,27 @@
+[
+  '{{repeat(5, 7)}}',
+  {
+     name: '{{firstName()}} {{surname()}}',
+    _clientId: '{{objectId()}}',
+    company: '{{company().toUpperCase()}}',
+    email: '{{email()}}',
+	password:'{{lorem(1, "words")}}',
+    index:'{{index()}}',
+    guid: '{{guid()}}',
+    isActive: '{{bool()}}',
+    contracts:[
+      '{{repeat(3)}}',
+      {
+         guid: '{{guid()}}',
+         rentalDate: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
+         startDate: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
+         releaseDate: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',      
+         balance: '{{floating(1000, 4000, 2, "$0,0.00")}}',
+         transferDate: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
+         transactionFees: '{{floating(10, 100, 2, "$0,0.00")}}',
+         days: '{{integer(1, 1000)}}',
+        status: '{{random("paid","deployed","refunded")}}'
+      }
+    ]
+  }
+]
